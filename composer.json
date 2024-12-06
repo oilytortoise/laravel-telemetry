@@ -18,5 +18,12 @@
             "name": "oilytortoise",
             "email": "dev@oilytortoise.xyz"
         }
-    ]
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oilytortoise\\LaravelTelemetry\\TelemetryServiceProvider"
+            ]
+        }
+    }
 }
