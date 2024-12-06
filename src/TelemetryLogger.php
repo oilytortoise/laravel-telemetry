@@ -155,9 +155,9 @@ class TelemetryLogger
      */
     public function shouldIgnore(Throwable $e)
     {
-        $ignoredExceptions = config('telemetry.ignore_exceptions') ?? [];
+        $exceptionBlacklist = config('telemetry.exception_blacklist') ?? [];
 
-        foreach ($ignoredExceptions as $class) {
+        foreach ($exceptionBlacklist as $class) {
             if ($e instanceof $class) {
                 return true;
             }
@@ -170,9 +170,9 @@ class TelemetryLogger
      */
     public function shouldReport(Throwable $e)
     {
-        $reportExceptions = config('telemetry.report_exceptions') ?? [];
+        $exceptionWhitelist = config('telemetry.exception_whitelist') ?? [];
 
-        foreach ($reportExceptions as $class) {
+        foreach ($exceptionWhitelist as $class) {
             if ($e instanceof $class) {
                 return true;
             }
