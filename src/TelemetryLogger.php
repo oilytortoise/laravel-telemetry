@@ -123,7 +123,7 @@ class TelemetryLogger
      */
     protected function log(string $level, string $message, array $context)
     {
-        if ($this->logger instanceof Monolog) {
+        if ($this->logger instanceof Logger) {
             $this->logger->$level($message, $context);
         } else {
             $this->logger::$level($message, $context);
