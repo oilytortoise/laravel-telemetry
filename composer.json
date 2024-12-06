@@ -1,0 +1,21 @@
+{
+    "name": "oilytortoise/laravel-telemetry",
+    "description": "A simple package for integrating a Laravel application with BetterStack's Telemetry service.",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^11.34",
+        "php": "8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Oilytortoise\\LaravelTelemetry\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "OilyTortoise",
+            "email": "dev@oilytortoise.xyz"
+        }
+    ]
+}
