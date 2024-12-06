@@ -67,14 +67,14 @@ To report all exceptions EXCEPT for the ones in your configured `exception_black
 if (! app('telemetry')->shouldIgnore($e)) {
     app('telemetry')->error($e->getMessage()); // or however you'd like to log the errors.
 }
-```
+```  
 </br>
 To report only the exceptions that appear in your configured `exception_whitelist`:
 ```
 if (! app('telemetry')->shouldReport($e)) {
     app('telemetry')->error($e->getMessage()); // or however you'd like to log the errors.
 }
-```
+```  
 </br>
 The choice is yours whether you want to report all exceptions except for the ones blacklisted in the `telemetry.php` config file, or only report the exceptions whitelisted in the config file.
 
