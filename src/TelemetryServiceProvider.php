@@ -35,7 +35,7 @@ class TelemetryServiceProvider extends ServiceProvider
     protected function publishConfig()
     {
         $this->publishes([
-            __DIR__.'/../config/telemetry.php' => config_path('telemetry.php'),
+            __DIR__.'/config/telemetry.php' => config_path('telemetry.php'),
         ], 'telemetry-config');
     }
 }
